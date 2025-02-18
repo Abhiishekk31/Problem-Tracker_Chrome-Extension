@@ -1,0 +1,87 @@
+/* Container for the entire popup */
+.container {
+    width: 280px;  /* Set width for the popup */
+    color: #314d3e;  /* Dark green color for the text */
+    background-color: #f9f9f9;  /* Slight off-white background */
+    padding: 10px;
+    box-sizing: border-box;  /* Include padding in the element's total width and height */
+    border-radius: 8px;  /* Rounded corners */
+}
+
+/* Title styling */
+.title {
+    font-size: 16px;  /* Increased font size for better readability */
+    font-weight: bold;
+    text-align: center;  /* Center align the title */
+    margin-bottom: 15px;  /* Add space below the title */
+    color: #2c3e50;  /* Darker shade for title */
+}
+
+/* Bookmarks container */
+.bookmarks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-right: 10px;  /* To prevent content from touching the right edge */
+    max-height: 350px;  /* Make the container scrollable if there are too many bookmarks */
+    overflow-y: auto;
+}
+
+/* Individual bookmark item */
+.bookmark {
+    display: flex;
+    justify-content: space-between;  /* Space between title and controls */
+    align-items: center;
+    border-bottom: 1px solid #00254d;  /* Blue border to separate bookmarks */
+    padding: 6px;
+    margin-bottom: 10px;
+    border-radius: 8px;  /* Rounded corners for each bookmark */
+    background-color: #ffffff;  /* White background for each bookmark */
+    transition: background-color 0.3s ease;
+}
+
+.bookmark:hover {
+    background-color: #f1f1f1;  /* Light background color on hover */
+}
+
+/* Bookmark title styling */
+.bookmark-title {
+    font-size: 14px;
+    font-weight: normal;
+    color: #333;  /* Darker color for readability */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;  /* Prevent long titles from overflowing */
+    max-width: 170px;  /* Restrict the width of the title */
+}
+
+/* Control buttons container */
+.bookmark-controls {
+    display: flex;
+    justify-content: flex-end;  /* Align the controls to the right */
+    gap: 10px;
+}
+
+/* Control buttons styling (play, delete) */
+.bookmark-controls img {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    border-radius: 3px;  /* Add slight rounding for a more modern look */
+}
+
+.bookmark-controls img:hover {
+    opacity: 0.7;  /* Reduce opacity on hover for a visual cue */
+    background-color: #e0e0e0;  /* Light background on hover for better visual feedback */
+    padding: 4px;  /* Slight padding for better clickability */
+}
+
+/* Optional: Styling for no bookmarks */
+.no-bookmarks {
+    font-size: 14px;
+    color: #777;
+    text-align: center;
+    margin-top: 20px;
+    font-style: italic;
+}
